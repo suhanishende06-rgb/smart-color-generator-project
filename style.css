@@ -1,0 +1,121 @@
+:root {
+  --bg: linear-gradient(135deg, #141e30, #243b55);
+  --card-bg: rgba(255, 255, 255, 0.25);
+  --text: #000;
+  --btn-bg: #1f2933;
+  --btn-text: #ffffff;
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #000428, #004e92);
+  --card-bg: rgba(0, 0, 0, 0.45);
+  --text: #ffffff;
+  --btn-bg: #111827;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Glass card */
+.glass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.container {
+  width: 340px;
+  padding: 26px;
+  border-radius: 16px;
+  background: var(--card-bg);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  margin-top: 18px;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Color preview */
+.color-box {
+  height: 150px;
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+/* Color code text */
+.color-code {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Buttons */
+.buttons button,
+.theme-toggle {
+  margin: 6px;
+  padding: 9px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase; /* professional uppercase */
+  letter-spacing: 0.8px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.buttons button:hover,
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  background: #374151;
+}
+
+/* Palette */
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.palette div {
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  margin: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.palette div:hover {
+  transform: scale(1.1);
+  border: 2px solid #000;
+}
+
+/* Theme toggle position */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
