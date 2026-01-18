@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Color Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <div class="container glass">
+    <h2>Smart Color Generator</h2>
+
+    <div class="color-box" id="colorBox"></div>
+
+    <p class="color-code" id="colorCode">#000000</p>
+
+    <div class="buttons">
+      <button onclick="generateColor()">Generate Color</button>
+      <button onclick="toggleFormat()">Toggle HEX / RGB</button>
+      <button onclick="generateGradient()">Generate Gradient</button>
+      <button onclick="saveColor()">Save Color</button>
+    </div>
+
+    <h3>Saved Colors</h3>
+    <div class="palette" id="palette"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
